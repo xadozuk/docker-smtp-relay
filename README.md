@@ -11,6 +11,7 @@ Github : https://github.com/xadozuk/docker-smtp-relay
 ## Security Consideration
 
 This image has **not** been extensively tested for security. 
+
 *Only* containers from docker network can use the smtp relay.
 
 You **shouldn't** expose the port 25 of this container directly on the Internet.
