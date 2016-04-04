@@ -7,6 +7,8 @@ You must configure your domain accordingly (reverse DNS, SPF, ...) for mail not 
 
 This image has not been extensively tested for security. *Only* containers from docker network can use the smtp relay.
 
+You **shouldn't** expose the port 25 of this container directly on the Internet.
+
 ## Usage
 
 1. First start the smtp relay container
