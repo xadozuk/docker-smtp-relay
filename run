@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ! -f "/etc/postfix/.initialized" ]; then
+    if [ -z "$SMTP_HOSTNAME" ]; then
+        echo "You must provide \$SMTP_HOSTNAME when creating the container"
+        exit 1
+    fi
+
+    echo "Initializing postfix configuration"
+    printf "\n
+myhostname = $SMTP_HOSTNAME\n
+myorigin = \$mydomain\n
+" >> /etc/postfix/main.cf
+
+    touch /etc/postfix/.initialized
+fi
+
+exec /postfix
