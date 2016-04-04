@@ -1,6 +1,7 @@
 # xadozuk/smtp-relay
 
 Internal SMTP relay for docker containers.
+
 You must configure your domain accordingly (reverse DNS, SPF, ...) for mail not to be considered as spam.
 
 Docker : https://hub.docker.com/r/xadozuk/smtp-relay
