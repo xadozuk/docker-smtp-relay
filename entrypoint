@@ -10,9 +10,10 @@ if [ ! -f "/etc/postfix/.initialized" ]; then
     printf "\n
 myhostname = $SMTP_HOSTNAME\n
 myorigin = \$mydomain\n
+mynetworks_style = subnet\n
 " >> /etc/postfix/main.cf
 
     touch /etc/postfix/.initialized
 fi
 
-exec /postfix
+exec /usr/bin/supervisord
