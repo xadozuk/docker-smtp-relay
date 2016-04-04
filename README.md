@@ -28,5 +28,5 @@ You **shouldn't** expose the port 25 of this container directly on the Internet.
   docker run -d --link smtp-relay:smtp <image>
   ```
   
-3. Connect to the smtp relay with `smtp:25`.
+3. Connect to the smtp relay with `smtp:25` inside your container.
 4. Enjoy !
